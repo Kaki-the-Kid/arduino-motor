@@ -1,3 +1,10 @@
+#include <Servo.h>         // Library with Servo helper funnctions
+#include <NewPing.h>       // Library v. 1.9.4 helper to Ulrosonic sensor
+#include <LiquidCrystal.h> // Library for Display functions
+
+// Control pins
+
+
 void setup() {
   // put your setup code here, to run once:
 
@@ -6,7 +13,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-}#include <LiquidCrystal.h>
+}
 
 /*
   The circuit:
