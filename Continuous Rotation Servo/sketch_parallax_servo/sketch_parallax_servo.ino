@@ -2,6 +2,10 @@
 #include <NewPing.h>       // Library v. 1.9.4 helper to Ulrosonic sensor
 #include <LiquidCrystal.h> // Library for Display functions
 
+// -----------------------------------------------
+// Display setup
+// -----------------------------------------------
+
 // Control pins
 
 
@@ -14,6 +18,9 @@ void loop() {
   // put your main code here, to run repeatedly:
 
 }
+
+
+
 
 /*
   The circuit:
