@@ -22,7 +22,8 @@
 
 # Hjul og encoder
 
-| Med encoder | Uden encoder 
+| Med encoder | Uden encoder |
+| -- | -- |
 | <img style="width: 250px;" src="https://user-images.githubusercontent.com/44589560/160073228-652ac992-f030-4a5c-824e-55f748175f94.png" /> |
 <img style="width: 250px;" src="https://user-images.githubusercontent.com/44589560/160073520-86851f02-3c5f-4e62-a71c-03a6b9c56d2a.png" /> |
 
