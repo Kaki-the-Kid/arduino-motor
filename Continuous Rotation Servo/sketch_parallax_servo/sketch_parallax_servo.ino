@@ -73,6 +73,8 @@ void loop() {
   Serial.print("X:");
   Serial.print(x_value, DEC);
   x_pos = map(x_value, 0, 1023, 0, 180);
+  if (x_pos < 95 && x_pos > 85)
+    x_pos = 90;
   LeftServo.write(x_pos);
   Serial.print(" ");
   Serial.print(x_pos);
@@ -81,6 +83,8 @@ void loop() {
   Serial.print(" | Y:");
   Serial.print(y_value, DEC);
   y_pos = map(y_value, 0, 1023, 0, 180);
+  if (y_pos < 95 && y_pos > 85)
+    y_pos = 90;
   RightServo.write(y_pos);
   Serial.print(" ");
   Serial.print(y_pos);
