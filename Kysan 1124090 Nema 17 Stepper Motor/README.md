@@ -1,7 +1,9 @@
+
+
 | Specifications     | Value |
 | ------------------ | ---------------------------|
 |Model number        | 1124090
-|Holding Torque      | 5.5Kg.cm
+|Holding Torque      | 5.5 Kg.cm
 |Rated Voltage       | 4.2V
 |NO.of Phase         | 2
 |Step Angle          | 1.8° ± 5%
@@ -14,3 +16,4 @@
 |Operation Temp Range| -20 ~ +40° C
 |Lead Wire           | 22AWG / 750mm
 |Connector           | 4 pin 2.54mm 
+
