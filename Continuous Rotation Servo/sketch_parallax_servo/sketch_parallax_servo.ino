@@ -1,38 +1,20 @@
-#include <Servo.h>         // Library with Servo helper funnctions
-#include <NewPing.h>       // Library v. 1.9.4 helper to Ulrosonic sensor
-#include <LiquidCrystal.h> // Library for Display functions
-
-// -----------------------------------------------
-// Display setup
-// -----------------------------------------------
+#include <Servo.h>   // Unclude Servo Library
+#include <NewPing.h> // Include Newping Library
+#include <LiquidCrystal.h>
 
 // Control pins
+const int ServoPin1 =  9;  // Digital Pin for Servo 1
+const int ServoPin2 = 10;  // Digital Pin for Servo 2
 
+Servo LeftServo;
+Servo RightServo;
 
-
-/*
-  The circuit:
- * LCD RS pin to digital pin 12
- * LCD Enable pin to digital pin 11
- * LCD D4 pin to digital pin 5
- * LCD D5 pin to digital pin 4
- * LCD D6 pin to digital pin 3
- * LCD D7 pin to digital pin 2
- * LCD R/W pin to ground
- * LCD VSS pin to ground
- * LCD VCC pin to 5V
- * 10K pot:
- * ends to +5V and ground
- * wiper to LCD VO pin (pin 3)
- */
- 
 // initialize the library by associating any needed LCD interface pin
 // with the arduino pin number it is connected to
 const int rs = 12, en = 11, d4 = 7, d5 = 6, d6 = 5, d7 = 4;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
-
-int value = 0;
+int value  = 0;
 int x_axis = A0;
 int y_axis = A1;
 int joy_button_pin = 8;
@@ -43,7 +25,7 @@ String directionString(int x, int y) {
   if ( x <= 450)
     direction  = "Bottom ";
   else  if ( x >= 550 )
-    direction  = "Top ";
+    direction  = "Top    ";
   else if ( x > 450 && x < 550)
     direction = "Middle ";
 
@@ -58,30 +40,57 @@ String directionString(int x, int y) {
 }
 
 void setup() {
+  Serial.begin(9600);           // Set the baud rate for seriel connection
+  LeftServo.attach(ServoPin1);  // Sætter forbindelse pin 9 til Venstre Servo
+  RightServo.attach(ServoPin2); // Sætter forbindelse pin 10 til Højre Servo
+  
+  pinMode(ServoPin1, OUTPUT);
+  pinMode(ServoPin2, OUTPUT);
+
+  digitalWrite(ServoPin1, LOW); // When not sending PWM, we want it low
+  digitalWrite(ServoPin2, LOW); // When not sending PWM, we want it low
+
+  // Joystick setup
   pinMode(x_axis, INPUT);
   pinMode(y_axis, INPUT);
   pinMode(joy_button_pin, INPUT_PULLUP); //set pin 7 as an input and enable the internal pull-up resistor
 
-  Serial.begin(9600);
-
+  // Display setup
   lcd.begin(16, 2); // set up the LCD's number of columns and rows:
-  lcd.print("               "); // Print a message to the LCD.
 }
 
+
+void stop() {
+  
+}
+
+
 void loop() {
-  int x_value = analogRead(x_axis); // read X axis value [0..1023]
+  int x_value, y_value, x_pos, y_pos;
+  
+  x_value = analogRead(x_axis); // read X axis value [0..1023]
+  x_value += 3;
   Serial.print("X:");
   Serial.print(x_value, DEC);
-  
-  int y_value = analogRead(y_axis); // read Y axis value [0..1023]
+  x_pos = map(x_value, 0, 1023, 0, 180);
+  LeftServo.write(x_pos);
+  Serial.print(" ");
+  Serial.print(x_pos);
+ 
+  y_value = analogRead(y_axis); // read Y axis value [0..1023]
   Serial.print(" | Y:");
   Serial.print(y_value, DEC);
-  
+  y_pos = map(y_value, 0, 1023, 0, 180);
+  RightServo.write(y_pos);
+  Serial.print(" ");
+  Serial.print(y_pos);
+
   int b_value = digitalRead(joy_button_pin); // read Button state [0,1]
   Serial.print(" | Button:");
   Serial.println(b_value, DEC);
 
   lcd.setCursor(0, 0);
   lcd.print( directionString(x_value, y_value) );
+  
   delay(100);
 }
