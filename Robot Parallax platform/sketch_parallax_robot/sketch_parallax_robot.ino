@@ -3,8 +3,8 @@
 #include <LiquidCrystal.h>
 
 // Control pins
-int ServoPin1 =  9;  // Digital Pin for Servo 1
-int ServoPin2 = 10;  // Digital Pin for Servo 2
+const int ServoPin1 =  9;  // Digital Pin for Servo 1
+const int ServoPin2 = 10;  // Digital Pin for Servo 2
 
 Servo LeftServo;
 Servo RightServo;
@@ -59,22 +59,28 @@ void setup() {
   lcd.begin(16, 2); // set up the LCD's number of columns and rows:
 }
 
+void stop() {
+  
+}
+
 
 void loop() {
-  int x_value = analogRead(x_axis); // read X axis value [0..1023]
+  int x_value, y_value, x_pos, y_pos;
   
+  x_value = analogRead(x_axis); // read X axis value [0..1023]
+  x_value += 3;
   Serial.print("X:");
   Serial.print(x_value, DEC);
-  int x_pos = map(x_value, 0, 1023, 0, 180);
+  x_pos = map(x_value, 0, 1023, 0, 180);
   LeftServo.write(x_pos);
   Serial.print(" ");
   Serial.print(x_pos);
  
-  int y_value = analogRead(y_axis); // read Y axis value [0..1023]
+  y_value = analogRead(y_axis); // read Y axis value [0..1023]
   Serial.print(" | Y:");
   Serial.print(y_value, DEC);
-  int y_pos = map(y_value, 0, 1023, 0, 180);
-  RightServo.write(x_pos);
+  y_pos = map(y_value, 0, 1023, 0, 180);
+  RightServo.write(y_pos);
   Serial.print(" ");
   Serial.print(y_pos);
 
@@ -84,7 +90,6 @@ void loop() {
 
   lcd.setCursor(0, 0);
   lcd.print( directionString(x_value, y_value) );
-
   
   delay(100);
 }
