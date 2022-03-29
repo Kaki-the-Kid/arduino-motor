@@ -65,31 +65,31 @@ void stop() {
 
 
 void loop() {
-  int x_value, y_value, x_pos, y_pos;
+  // int x_value, y_value, x_pos, y_pos;
   
-  x_value = analogRead(x_axis); // read X axis value [0..1023]
-  x_value += 3;
-  Serial.print("X:");
-  Serial.print(x_value, DEC);
-  x_pos = map(x_value, 0, 1023, 0, 180);
-  LeftServo.write(x_pos);
-  Serial.print(" ");
-  Serial.print(x_pos);
+  // x_value = analogRead(x_axis); // read X axis value [0..1023]
+  // x_value += 3;
+  // Serial.print("X:");
+  // Serial.print(x_value, DEC);
+  // x_pos = map(x_value, 0, 1023, 0, 180);
+  // LeftServo.write(x_pos);
+  // Serial.print(" ");
+  // Serial.print(x_pos);
  
-  y_value = analogRead(y_axis); // read Y axis value [0..1023]
-  Serial.print(" | Y:");
-  Serial.print(y_value, DEC);
-  y_pos = map(y_value, 0, 1023, 0, 180);
-  RightServo.write(y_pos);
-  Serial.print(" ");
-  Serial.print(y_pos);
+  // y_value = analogRead(y_axis); // read Y axis value [0..1023]
+  // Serial.print(" | Y:");
+  // Serial.print(y_value, DEC);
+  // y_pos = map(y_value, 0, 1023, 0, 180);
+  // RightServo.write(y_pos);
+  // Serial.print(" ");
+  // Serial.print(y_pos);
 
-  int b_value = digitalRead(joy_button_pin); // read Button state [0,1]
-  Serial.print(" | Button:");
-  Serial.println(b_value, DEC);
+  // int b_value = digitalRead(joy_button_pin); // read Button state [0,1]
+  // Serial.print(" | Button:");
+  // Serial.println(b_value, DEC);
 
-  lcd.setCursor(0, 0);
-  lcd.print( directionString(x_value, y_value) );
+  // lcd.setCursor(0, 0);
+  // lcd.print( directionString(x_value, y_value) );
   
   delay(100);
 }
