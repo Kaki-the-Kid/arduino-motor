@@ -1,5 +1,9 @@
 # Encoder
 
+Encoder kan fungere på forskellige måder og de kan have forskellig opløsning på antallet af målinger pr. runde.
+
+<img style="width: 250px;" src="https://user-images.githubusercontent.com/44589560/161252494-f8611837-0480-4906-8a8c-3f2d5b43bb43.png" />
+
 Her vist med Parallax encoder til robot plafformen
 
 ![image](https://user-images.githubusercontent.com/44589560/161252040-c705701a-28c4-4fa3-bf30-c40a27994c70.png)
