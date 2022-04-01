@@ -1,0 +1,33 @@
+# Encoder
+
+Her vist med Parallax encoder til robot plafformen
+
+
+The Parallax 28107 Boe-Bot® Robot Digital Encoder kit answers a long-standing customer request for position feedback used to improve dead-reckoning, solve mazes, contests and map paths of travel.
+The infrared reflective sensors mount next to the Boe-Bot Robot’s wheel to count cycles using the wheel holes.
+
+Product Features:
+
+Wheel position controlled navigation
+Position sensors provide feedback
+Easy installation & programming key
+Specifications:
+
+Power requirements: 5 VDC
+Communication: Transistor (open collector)
+Operating temperature range: -32 to +158 °F (-0 to +70 °C)
+Kit Contents:
+
+(2) Reflective Sensors
+(2) Connecting Cable
+(2) 10K 1/4 W Resistors
+(2) Mounting plates
+(2) #4-40 x 1/4" panhead machine screw
+(2) #4-40 Hex nut
+Notes: This is an add-on kit for the Parallax Boe-Bot Full Kit, which includes 8-spoked wheels required for the Digital Encoders. It is not intended for the ActivityBot Robot Kit, which requires different cables and resistors.
+
+Downloads:
+
+BOE-Bot Digital Encoder Product Document
+Digital Encoder Applications for the BASIC Stamp
+Applying the BOE-Bot Digital Encoder Kit
