@@ -4,3 +4,7 @@ En servomotor er en motor, hvis aksel drejer til en bestemt position baseret på
 
 <img src="article-2017march-servo-motors-and-control-fig1.jpg" />
 
+<figure>
+  <img src="article-2017march-servo-motors-and-control-fig1.jpg" />
+  <figcaption>Fig.1 - Servo</figcaption>
+</figure>
