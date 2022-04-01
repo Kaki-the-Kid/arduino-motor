@@ -26,7 +26,7 @@ Bestem først om du har brug for begrænset (maks. 180 grader) eller kontinuerli
 
 Hvis du bygger et objekt i bevægelse, f.eks. en robot, bruges servoer med kontinuerlig rotation typisk til at drive hjulene. På den anden side kan servoer med begrænset rotation bruges til applikationer såsom placering af en modelflyvingeklap til flyvekontrol, en vandventil, en kontakt eller til at hjælpe et håndgreb, der bruges til en robotarm.
 
-# Test af 
+# Test af servoer
 ```C++
 /* Sweep
  by BARRAGAN <http://barraganstudio.com>
