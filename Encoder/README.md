@@ -2,6 +2,8 @@
 
 Her vist med Parallax encoder til robot plafformen
 
+![image](https://user-images.githubusercontent.com/44589560/161252040-c705701a-28c4-4fa3-bf30-c40a27994c70.png)
+
 
 The Parallax 28107 Boe-Bot® Robot Digital Encoder kit answers a long-standing customer request for position feedback used to improve dead-reckoning, solve mazes, contests and map paths of travel.
 The infrared reflective sensors mount next to the Boe-Bot Robot’s wheel to count cycles using the wheel holes.
