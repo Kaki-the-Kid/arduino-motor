@@ -10,4 +10,8 @@ En servomotor er en motor, hvis aksel drejer til en bestemt position baseret på
 # Servoens funktions måde
 Styringen af servomotorens akselposition kommer fra brug af et pulsbreddemodulationssignal (PWM) til at dreje akslen med uret eller mod uret, afhængigt af signalets pulsbredde. Typisk vil en pulsbredde på 1 ms rotere akslen med uret, og en 2 ms puls vil rotere akslen mod uret. For at placere skaftet halvvejs eller i midten fungerer en 1,5 ms puls typisk. Du skal bruge 20 ms mellem hver puls. Figur 2 nedenfor viser timingen for hver position.
 
-![image](https://user-images.githubusercontent.com/44589560/161221746-2ab1efd0-2eb9-4a35-abe5-0cd196939ab9.png)
+<figure>
+  <img src="https://user-images.githubusercontent.com/44589560/161221746-2ab1efd0-2eb9-4a35-abe5-0cd196939ab9.png" />
+  <figcaption>Fig.2 - PWM Timing for forskellige akselpositioner</figcaption>
+</figure>
+
