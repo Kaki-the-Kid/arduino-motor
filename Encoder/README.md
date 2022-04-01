@@ -2,14 +2,15 @@
 
 Encoder kan fungere på forskellige måder og de kan have forskellig opløsning på antallet af målinger pr. runde.
 
-Fri optisk encoder
-<img style="width: 250px;" src="https://user-images.githubusercontent.com/44589560/161252494-f8611837-0480-4906-8a8c-3f2d5b43bb43.png" />
+## Optiske encoder
 
-eller mere prææcis parallel absolut encoder
+| Fri optisk encoder | Parallel absolut encoder |
+| -- | -- |
+| <img style="width: 250px;" src="https://user-images.githubusercontent.com/44589560/161252494-f8611837-0480-4906-8a8c-3f2d5b43bb43.png" /> 
+| <img style="width: 250px;" src="https://user-images.githubusercontent.com/44589560/161252808-0d996de6-07bf-46d1-86bc-2bcead52e47e.png" />
+|
 
-<img style="width: 250px;" src="https://user-images.githubusercontent.com/44589560/161252808-0d996de6-07bf-46d1-86bc-2bcead52e47e.png" />
-
-
+Det kan også være huller som giver encoder til data
 
 Her vist med Parallax encoder til robot plafformen
 
