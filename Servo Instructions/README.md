@@ -70,3 +70,8 @@ Servomotoren blev derefter forbundet til en separat strømforsyning med jorden b
 For at styre motoren skal PWM-indgangen forbindes til kortet. Ved at se på koden ovenfor, er PWM-udgangen fastgjort til pin 9. Brug figur 3 ovenfor, brug den hvide ledning eller den midterste ledning, og fastgør den til pin 9 på kortet.
 
 Nu er det tid til at køre programmet. Programmet starter med at nulstille akslen med uret så langt den kan komme, og langsomt fejer den 180 grader mod uret og derefter tilbage den anden vej - med uret til nul. Et oscilloskop blev brugt til at måle PWM-pulsbredden, mens den gik gennem programmet. Det blev fundet, at 1,5 ms var korrekt for 90 grader og tæt på 600 µs for nul eller hele vejen med uret. Ved 180 grader, eller helt mod uret, var PWM-pulsen tæt på 2,2 ms. Programmet fungerede godt, og du kan ændre nogle af værdierne for at se forskellige effekter, såsom låste positioner, eller at ændring af forsinkelsen til en mindre værdi gør sweep-hastigheden op.
+
+# Yderligere materiale
+* Mechatrofice:<br />https://mechatrofice.com/arduino/servo-motor
+* Instructables - Arduino+Servo+Potentiometer:<br />https://www.instructables.com/ArduinoServoPotentiometer/
+* 
