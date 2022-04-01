@@ -62,3 +62,11 @@ void loop()   {
   }
 }
 ```
+
+USB-kablet blev derefter sat i kortet, og derefter blev "Arduino UNO"-kortet valgt under "Værktøjer" øverst til venstre på IDE. I samme menu blev Port valgt for at verificere, at programmet opfangede, hvilken COM-port kortet var tilsluttet. Til sidst blev der klikket på download-knappen øverst til venstre (lille pil, der peger mod højre). Efter et par sekunder blinkede det røde tavle med nogle lysdioder (hvilket indikerer, at det kompilerede program blev downloadet til tavlen).
+
+Servomotoren blev derefter forbundet til en separat strømforsyning med jorden bundet til kortets jord (USB-strøm kan kun drive så meget strøm, og servoen er en smule støjende med induktive pulser, der ikke er gode for kortet).
+
+For at styre motoren skal PWM-indgangen forbindes til kortet. Ved at se på koden ovenfor, er PWM-udgangen fastgjort til pin 9. Brug figur 3 ovenfor, brug den hvide ledning eller den midterste ledning, og fastgør den til pin 9 på kortet.
+
+Nu er det tid til at køre programmet. Programmet starter med at nulstille akslen med uret så langt den kan komme, og langsomt fejer den 180 grader mod uret og derefter tilbage den anden vej - med uret til nul. Et oscilloskop blev brugt til at måle PWM-pulsbredden, mens den gik gennem programmet. Det blev fundet, at 1,5 ms var korrekt for 90 grader og tæt på 600 µs for nul eller hele vejen med uret. Ved 180 grader, eller helt mod uret, var PWM-pulsen tæt på 2,2 ms. Programmet fungerede godt, og du kan ændre nogle af værdierne for at se forskellige effekter, såsom låste positioner, eller at ændring af forsinkelsen til en mindre værdi gør sweep-hastigheden op.
