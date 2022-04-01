@@ -12,7 +12,9 @@ Det kan også være huller som giver encoder til data
 
 Her vist med Parallax encoder til robot plafformen
 
-![image](https://user-images.githubusercontent.com/44589560/161252040-c705701a-28c4-4fa3-bf30-c40a27994c70.png)
+| Encoder | Hjul |
+| -- | -- |
+| ![image](https://user-images.githubusercontent.com/44589560/161252040-c705701a-28c4-4fa3-bf30-c40a27994c70.png) | ![image](https://user-images.githubusercontent.com/44589560/161253637-42104562-364a-42da-860c-b806c7eb45d5.png) |
 
 
 The Parallax 28107 Boe-Bot® Robot Digital Encoder kit answers a long-standing customer request for position feedback used to improve dead-reckoning, solve mazes, contests and map paths of travel.
