@@ -15,7 +15,7 @@ Styringen af servomotorens akselposition kommer fra brug af et pulsbreddemodulat
   <figcaption>Fig.2 - PWM Timing for forskellige akselpositioner</figcaption>
 </figure>
 
-
+# Servoens forbindelse
 <figure>
   <img src="https://user-images.githubusercontent.com/44589560/161222161-589eb82e-e268-469a-a586-f7b18cbfbfdf.png" />
   <figcaption>Figure 3: The wiring connections as shown in Parallax’s datasheet.</figcaption>
