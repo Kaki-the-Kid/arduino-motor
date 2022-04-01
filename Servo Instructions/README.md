@@ -21,3 +21,8 @@ Styringen af servomotorens akselposition kommer fra brug af et pulsbreddemodulat
   <figcaption>Figure 3: The wiring connections as shown in Parallax’s datasheet.</figcaption>
 </figure>
 
+# Vælg servo til dit projekt
+Bestem først om du har brug for begrænset (maks. 180 grader) eller kontinuerlig rotation. Du bør også bemærke mængden af drejningsmoment, akslen skal have til din anvendelse, sammen med rotationshastigheden, som er vurderet i RPM (omdrejninger pr. minut).
+
+Hvis du bygger et objekt i bevægelse, f.eks. en robot, bruges servoer med kontinuerlig rotation typisk til at drive hjulene. På den anden side kan servoer med begrænset rotation bruges til applikationer såsom placering af en modelflyvingeklap til flyvekontrol, en vandventil, en kontakt eller til at hjælpe et håndgreb, der bruges til en robotarm.
+
