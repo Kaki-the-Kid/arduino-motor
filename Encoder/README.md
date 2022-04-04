@@ -43,3 +43,6 @@ Downloads:
 * BOE-Bot Digital Encoder Product Document
 * Digital Encoder Applications for the BASIC Stamp
 * Applying the BOE-Bot Digital Encoder Kit
+
+# More reading
+* Code For Free - Encoders<br />http://codeforfree.weebly.com/optical-encoders.html
