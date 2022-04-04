@@ -6,6 +6,16 @@
 const int ServoPin1 =  9;  // Digital Pin for Servo 1
 const int ServoPin2 = 10;  // Digital Pin for Servo 2
 
+const int encoderPinLeft  = 12;
+const int encoderPinRight = 13;
+int x_count = 0;
+int y_count = 0;
+
+int value  = 0;
+int x_axis = A0;
+int y_axis = A1;
+int joy_button_pin = 8;
+
 Servo LeftServo;
 Servo RightServo;
 
@@ -14,10 +24,6 @@ Servo RightServo;
 const int rs = 12, en = 11, d4 = 7, d5 = 6, d6 = 5, d7 = 4;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
-int value  = 0;
-int x_axis = A0;
-int y_axis = A1;
-int joy_button_pin = 8;
 
 String directionString(int x, int y) {
   String direction = String(x, DEC);
@@ -42,12 +48,17 @@ String directionString(int x, int y) {
 void setup() {
   Serial.begin(9600);           // Set the baud rate for seriel connection
   start();                      // Start servoes
-  
+
+  // Servo setup
   pinMode(ServoPin1, OUTPUT);
   pinMode(ServoPin2, OUTPUT);
 
   digitalWrite(ServoPin1, LOW); // When not sending PWM, we want it low
   digitalWrite(ServoPin2, LOW); // When not sending PWM, we want it low
+
+  // Encoder setup
+  pinMode(encoderPinLeft, INPUT);
+  pinMode(encoderPinRight, INPUT);
 
   // Joystick setup
   pinMode(x_axis, INPUT);
@@ -76,7 +87,16 @@ void loop() {
   Serial.print("X:");
   Serial.print(x_value, DEC);
   x_pos = map(x_value, 0, 1023, 0, 180);
-  LeftServo.write(x_pos);
+  
+  if (x_pos > 85 && x_pos < 95)
+  {
+    x_pos = 90;  // Remove some of the twiching
+    LeftServo.detach();
+  } else {
+    LeftServo.attach(ServoPin2); // Sætter forbindelse pin 10 til Højre Servo
+    LeftServo.write(x_pos);
+  }
+
   Serial.print(" ");
   Serial.print(x_pos);
  
@@ -84,7 +104,16 @@ void loop() {
   Serial.print(" | Y:");
   Serial.print(y_value, DEC);
   y_pos = map(y_value, 0, 1023, 0, 180);
-  RightServo.write(y_pos);
+  
+  if (y_pos > 85 && y_pos < 95)
+  {
+    y_pos = 90;
+    RightServo.detach();
+  } else {
+    RightServo.attach(ServoPin1);  // Sætter forbindelse pin 9 til Venstre Servo
+    RightServo.write(y_pos);
+  }
+
   Serial.print(" ");
   Serial.print(y_pos);
 
@@ -94,8 +123,13 @@ void loop() {
 
   lcd.setCursor(0, 0);
   lcd.print( directionString(x_value, y_value) );
+
+  lcd.setCursor(0, 1);
+  lcd.print( "x#=" );
+  lcd.print( x_count );
+  lcd.print( "y#=" );
+  lcd.print( y_count );
+  lcd.print( "  " );
   
   delay(100);
-
-  
 }
