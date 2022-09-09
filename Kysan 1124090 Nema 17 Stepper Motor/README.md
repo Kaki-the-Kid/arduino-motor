@@ -19,3 +19,5 @@
 
 ![image](https://user-images.githubusercontent.com/44589560/189335506-8e703a9c-47f0-4999-983d-0f3814040579.png)
 
+##Referencer
+* https://www.mischianti.org/2019/04/08/how-to-reuse-4-wire-and-6-wire-stepper-motors-for-your-projects/
