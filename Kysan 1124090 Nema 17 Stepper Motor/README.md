@@ -1,4 +1,7 @@
+# Stepper motor Kysan 1124090 NEMA17 Stepper Motor
 <img alt="Kysan 1124090 NEMA17 Stepper Motor" src="https://m.media-amazon.com/images/I/81+KUV0tNNL._SX522_.jpg" data-old-hires="https://m.media-amazon.com/images/I/81+KUV0tNNL._SL1500_.jpg" onload="markFeatureRenderForImageBlock(); this.onload='';setCSMReq('af');if(typeof addlongPoleTag === 'function'){ addlongPoleTag('af','desktop-image-atf-marker');};setCSMReq('cf')" data-a-image-name="landingImage" class="a-dynamic-image a-stretch-horizontal" id="landingImage" data-a-dynamic-image="{&quot;https://m.media-amazon.com/images/I/81+KUV0tNNL._SX385_.jpg&quot;:[257,385],&quot;https://m.media-amazon.com/images/I/81+KUV0tNNL._SX425_.jpg&quot;:[283,425],&quot;https://m.media-amazon.com/images/I/81+KUV0tNNL._SX466_.jpg&quot;:[311,466],&quot;https://m.media-amazon.com/images/I/81+KUV0tNNL._SX522_.jpg&quot;:[348,522],&quot;https://m.media-amazon.com/images/I/81+KUV0tNNL._SX342_.jpg&quot;:[228,342]}" style="max-width: 291px; max-height: 194.252px;">
+
+## Specifications
 
 | Specifications     | Value |
 | ------------------ | ---------------------------|
@@ -19,5 +22,9 @@
 
 ![image](https://user-images.githubusercontent.com/44589560/189335506-8e703a9c-47f0-4999-983d-0f3814040579.png)
 
-##Referencer
+## References
 * https://www.mischianti.org/2019/04/08/how-to-reuse-4-wire-and-6-wire-stepper-motors-for-your-projects/
+
+
+## Training and tutorials
+* Stepper Motors with Arduino - Controlling Bipolar & Unipolar stepper motors<br/>https://www.youtube.com/watch?v=0qwrnUeSpYQ
