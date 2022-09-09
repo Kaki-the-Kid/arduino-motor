@@ -28,3 +28,4 @@
 
 ## Training and tutorials
 * Stepper Motors with Arduino - Controlling Bipolar & Unipolar stepper motors<br/>https://www.youtube.com/watch?v=0qwrnUeSpYQ
+* Control DC and Stepper Motors With L298N Dual Motor Controller Modules and Arduino<br >https://www.instructables.com/Control-DC-and-stepper-motors-with-L298N-Dual-Moto/
