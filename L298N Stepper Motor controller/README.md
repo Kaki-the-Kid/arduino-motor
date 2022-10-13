@@ -4,7 +4,7 @@
 
 Stepper Motor/DC motor control.
 
-Specification:
+## Specification
 1. Double H bridge drive
 2. Chip L298N (ST NEW)
 3. Logical voltage 5V
@@ -13,6 +13,9 @@ Specification:
 6. Drive current 2A(MAX single bridge)
 7. Storage temperature -20 to +135
 8. Max power 25W
+
+## Datasheet
+https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf
 
 ## References and inspiration
 * https://www.instructables.com/Control-DC-and-stepper-motors-with-L298N-Dual-Moto/
